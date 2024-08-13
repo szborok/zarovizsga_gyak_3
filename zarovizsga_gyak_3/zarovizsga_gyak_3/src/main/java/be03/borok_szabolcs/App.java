@@ -49,6 +49,8 @@ public class App {
             System.out.println("Add meg egy diák nevét: ");
             Scanner scanner = new Scanner(System.in);
             String inputDiakNeve = scanner.nextLine();
+            
+            scanner.close();
             if (diakok.containsKey(inputDiakNeve)) {
 
                 Integer diakSzama = diakok.get(inputDiakNeve);
@@ -64,6 +66,7 @@ public class App {
             else {
                 throw new Exception("Iyen nev nincs.");
             }
+
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -128,7 +131,7 @@ public class App {
 
             // adott honap szimulalasa
             for (int j = 1; j < diakok.size() + 1; j++) {
-                Integer diakSzama = j;
+                //Integer diakSzama = j;
                 Integer jegyekSzama = rnd.nextInt(1, 6);
 
                 System.out.println(j + ". diak");
